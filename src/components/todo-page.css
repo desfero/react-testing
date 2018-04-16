@@ -1,0 +1,9 @@
+#todos {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.todo-list {
+    margin-top: 10px;
+}
