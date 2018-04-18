@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TodoItem should render layout 1`] = `
+<React.Fragment>
+  <span>
+    Something
+  </span>
+  <button
+    className="float-right btn btn-outline-danger"
+    onClick={[Function]}
+  >
+    Remove
+  </button>
+</React.Fragment>
+`;
