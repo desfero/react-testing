@@ -1,0 +1,7 @@
+Zadanie domowe:
+
+1) Dodać możliwość oznaczenia 'todo' jako 'completed'
+2) Dodać filtrowanie po: All/Completed/Uncompleted
+3) Dodać brakujące testy (idealnie to uzyskać 100% pokrycia, można sprawdzić poprzez 'npm run test:coverage')
+
+Powodzenia :)
