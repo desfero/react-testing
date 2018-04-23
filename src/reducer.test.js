@@ -18,6 +18,7 @@ describe('reducer', () => {
             filter: '',
             list: [{
                 id: 1,
+                done: false,
                 title: 'Complete my homework'
             }]
         });
@@ -45,6 +46,7 @@ describe('reducer', () => {
         expect(newState.get('list').toJS()).toEqual([
             {
                 title: 'New todo',
+                done: false,
                 id: 2
             },
             todo,

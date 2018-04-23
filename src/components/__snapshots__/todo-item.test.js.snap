@@ -2,6 +2,10 @@
 
 exports[`TodoItem should render layout 1`] = `
 <React.Fragment>
+  <input
+    onClick={[Function]}
+    type="checkbox"
+  />
   <span>
     Something
   </span>
