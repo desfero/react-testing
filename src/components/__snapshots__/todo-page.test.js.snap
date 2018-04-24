@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TodoPage should render the component 1`] = `
+<div
+  id="todos"
+>
+  <TodoForm
+    handleSubmit={[Function]}
+  />
+  <button
+    className="btn btn-outline-success"
+    onClick={[Function]}
+  >
+    Done
+  </button>
+  <button
+    className="btn btn-outline-danger"
+    onClick={[Function]}
+  >
+    Todo
+  </button>
+  <button
+    className="btn btn-outline-info"
+    onClick={[Function]}
+  >
+    All
+  </button>
+  <div
+    className="todo-list"
+  >
+    <Component
+      completeTodo={[Function]}
+      removeTodo={[Function]}
+      todos={
+        Immutable.List [
+        ]
+      }
+    />
+  </div>
+</div>
+`;
