@@ -13,5 +13,6 @@ export const TodoList = ({todos, removeTodo, completeTodo}) => (
 
 TodoList.propTypes = {
     removeTodo: PropTypes.func.isRequired,
+    completeTodo: PropTypes.func.isRequired,
     todos: PropTypes.instanceOf(List).isRequired,
 };

@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TodoList should render the component 1`] = `
+<ul
+  className="list-group list-group-flush"
+>
+  <li
+    className="list-group-item"
+    key="1"
+  >
+    <Component
+      completeTodo={[Function]}
+      item={
+        Object {
+          "done": false,
+          "id": 1,
+          "title": "Something",
+        }
+      }
+      removeTodo={[Function]}
+    />
+  </li>
+</ul>
+`;

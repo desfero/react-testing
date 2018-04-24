@@ -11,7 +11,8 @@ import {TodoForm} from './todo-form';
 import {TodoList} from './todo-list';
 
 
-class TodoPageBase extends Component {
+export class TodoPageBase extends Component {
+  // placing this as local component state on purpose
   state = { completedFilter: undefined };
 
   handleFilterChange(value) {

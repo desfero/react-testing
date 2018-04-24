@@ -3,7 +3,8 @@
 exports[`TodoItem should render layout 1`] = `
 <React.Fragment>
   <input
-    onClick={[Function]}
+    checked={false}
+    onChange={[Function]}
     type="checkbox"
   />
   <span>
