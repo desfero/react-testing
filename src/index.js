@@ -10,8 +10,8 @@ import {App} from './app';
 const store = configureStore();
 const rootElement = document.getElementById('root');
 
-function render(Component) {
-    domRender(
+export function render(Component) {
+    return domRender(
         <Provider store={store}>
             <BrowserRouter>
                 <div>
@@ -19,7 +19,7 @@ function render(Component) {
                 </div>
             </BrowserRouter>
         </Provider>,
-        rootElement
+      rootElement
     );
 }
 

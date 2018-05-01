@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`todo-form should correctly render component 1`] = `
+<React.Fragment>
+  <form
+    noValidate={true}
+    onSubmit={[Function]}
+  >
+    <input
+      autoComplete="off"
+      autoFocus={true}
+      className="form-control"
+      maxLength="64"
+      onChange={[Function]}
+      onKeyUp={[Function]}
+      placeholder="What needs to be done?"
+      type="text"
+      value=""
+    />
+  </form>
+  <div
+    className="filter"
+  >
+    <span>
+      Filter: 
+    </span>
+    <select
+      className="custom-select"
+      onChange={[Function]}
+    >
+      <option
+        key="ALL"
+        value="ALL"
+      >
+        ALL
+      </option>
+      <option
+        key="COMPLETED"
+        value="COMPLETED"
+      >
+        COMPLETED
+      </option>
+      <option
+        key="UNCOMPLETED"
+        value="UNCOMPLETED"
+      >
+        UNCOMPLETED
+      </option>
+    </select>
+  </div>
+</React.Fragment>
+`;

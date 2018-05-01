@@ -1,6 +1,6 @@
 import uniqid from 'uniqid';
 import { List, Record } from 'immutable';
-import { CHANGE_FILTER, CHANGE_TODO_STATE, CREATE_TODO, REMOVE_TODO, } from './action-types';
+import { CHANGE_FILTER, CHANGE_TODO_STATE, CREATE_TODO, REMOVE_TODO } from './action-types';
 
 export const TasksState = new Record({
     filter: 'ALL',

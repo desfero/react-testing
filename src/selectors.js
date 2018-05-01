@@ -6,6 +6,7 @@ export function getTodos(state) {
         case 'UNCOMPLETED':
             return state.todos.list.filter(todo => !todo.completed);
 
+        case 'ALL':
         default:
             return state.todos.list;
     }

@@ -1,15 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TodoItem should render layout 1`] = `
-<React.Fragment>
+<div
+  className="todo-item"
+>
+  <input
+    checked={false}
+    className="todo-item__checkbox"
+    onChange={[Function]}
+    type="checkbox"
+  />
   <span>
     Something
   </span>
   <button
-    className="float-right btn btn-outline-danger"
+    className="float-right btn btn-outline-danger todo-item__remove"
     onClick={[Function]}
   >
     Remove
   </button>
-</React.Fragment>
+</div>
 `;

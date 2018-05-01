@@ -5,7 +5,7 @@ import { changeFilter } from '../actions';
 
 import './todo-form.css';
 
-class TodoFormBase extends Component {
+export class TodoFormBase extends Component {
     static propTypes = {
         handleSubmit: PropTypes.func.isRequired
     };

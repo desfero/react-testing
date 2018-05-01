@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {List} from 'immutable';
+
 import {TodoItem} from './todo-item';
 
 export const TodoList = ({todos, removeTodo, changeTodoState}) => (

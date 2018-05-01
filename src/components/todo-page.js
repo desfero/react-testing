@@ -10,7 +10,7 @@ import {TodoForm} from './todo-form';
 import {TodoList} from './todo-list';
 
 
-class TodoPageBase extends Component {
+export class TodoPageBase extends Component {
     static propTypes = {
         createTodo: PropTypes.func.isRequired,
         removeTodo: PropTypes.func.isRequired,
