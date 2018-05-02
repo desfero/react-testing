@@ -24,7 +24,6 @@ export class TodoFormBase extends Component {
 
     handleSubmit = event => {
         event.preventDefault();
-
         const title = this.state.title.trim();
 
         if (title.length) {

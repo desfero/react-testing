@@ -1,52 +1,47 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`todo-form should correctly render component 1`] = `
-<React.Fragment>
+Array [
   <form
-    noValidate={true}
-    onSubmit={[Function]}
-  >
+    novalidate=""
+>
     <input
-      autoComplete="off"
-      autoFocus={true}
-      className="form-control"
-      maxLength="64"
-      onChange={[Function]}
-      onKeyUp={[Function]}
-      placeholder="What needs to be done?"
-      type="text"
-      value=""
-    />
-  </form>
+        autocomplete="off"
+        autofocus=""
+        class="form-control"
+        maxlength="64"
+        placeholder="What needs to be done?"
+        type="text"
+        value=""
+    >
+        
+    </input>
+</form>,
   <div
-    className="filter"
-  >
+    class="filter"
+>
     <span>
-      Filter: 
+        Filter: 
     </span>
     <select
-      className="custom-select"
-      onChange={[Function]}
+        class="custom-select"
     >
-      <option
-        key="ALL"
-        value="ALL"
-      >
-        ALL
-      </option>
-      <option
-        key="COMPLETED"
-        value="COMPLETED"
-      >
-        COMPLETED
-      </option>
-      <option
-        key="UNCOMPLETED"
-        value="UNCOMPLETED"
-      >
-        UNCOMPLETED
-      </option>
+        <option
+            value="ALL"
+        >
+            ALL
+        </option>
+        <option
+            value="COMPLETED"
+        >
+            COMPLETED
+        </option>
+        <option
+            value="UNCOMPLETED"
+        >
+            UNCOMPLETED
+        </option>
     </select>
-  </div>
-</React.Fragment>
+</div>,
+]
 `;

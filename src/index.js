@@ -10,8 +10,8 @@ import {App} from './app';
 const store = configureStore();
 const rootElement = document.getElementById('root');
 
-export function render(Component) {
-    return domRender(
+function render(Component) {
+    domRender(
         <Provider store={store}>
             <BrowserRouter>
                 <div>
