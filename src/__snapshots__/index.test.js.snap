@@ -1,11 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`index should render component 1`] = `
-<main>
-  <Route
-    component={[Function]}
-    exact={true}
-    path="/"
-  />
-</main>
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <BrowserRouter>
+    <div>
+      <Unknown />
+    </div>
+  </BrowserRouter>
+</Provider>
 `;
