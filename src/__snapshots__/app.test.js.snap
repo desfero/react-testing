@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`app component should render component 1`] = `
+<main>
+  <Route
+    component={[Function]}
+    exact={true}
+    path="/"
+  />
+</main>
+`;

@@ -19,7 +19,7 @@ function render(Component) {
                 </div>
             </BrowserRouter>
         </Provider>,
-        rootElement
+      rootElement
     );
 }
 

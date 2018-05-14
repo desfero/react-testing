@@ -1,21 +1,20 @@
 import './todo-page.css';
 import React, {Component} from 'react';
-import {List} from 'immutable';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {createSelector} from 'reselect';
 
-import {createTodo, removeTodo} from '../actions';
+import { changeTodoState, createTodo, removeTodo } from '../actions';
 import {getTodos} from '../selectors';
 import {TodoForm} from './todo-form';
 import {TodoList} from './todo-list';
 
 
-class TodoPageBase extends Component {
+export class TodoPageBase extends Component {
     static propTypes = {
         createTodo: PropTypes.func.isRequired,
         removeTodo: PropTypes.func.isRequired,
-        todos: PropTypes.instanceOf(List).isRequired,
+        changeTodoState: PropTypes.func.isRequired,
     };
 
     render() {
@@ -26,6 +25,7 @@ class TodoPageBase extends Component {
                 <div className="todo-list">
                     <TodoList
                         removeTodo={this.props.removeTodo}
+                        changeTodoState={this.props.changeTodoState}
                         todos={this.props.todos}
                     />
                 </div>
@@ -42,6 +42,7 @@ const mapStateToProps = createSelector(
 const mapDispatchToProps = {
     removeTodo,
     createTodo,
+    changeTodoState
 };
 
 

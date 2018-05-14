@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {List} from 'immutable';
+
 import {TodoItem} from './todo-item';
 
-export const TodoList = ({todos, removeTodo}) => (
+export const TodoList = ({todos, removeTodo, changeTodoState}) => (
     <ul className="list-group list-group-flush">
         {todos.map(todo => (
-            <li key={todo.id} className="list-group-item"><TodoItem item={todo} removeTodo={removeTodo}/></li>
+            <li key={todo.id} className="list-group-item"><TodoItem item={todo} removeTodo={removeTodo} changeTodoState={changeTodoState}/></li>
         ))}
     </ul>
 );

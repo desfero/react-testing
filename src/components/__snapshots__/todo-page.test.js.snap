@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`todo-page should render component 1`] = `
+<div
+  id="todos"
+>
+  <Connect(TodoFormBase)
+    handleSubmit={[Function]}
+  />
+  <div
+    className="todo-list"
+  >
+    <Component
+      changeTodoState={[Function]}
+      removeTodo={[Function]}
+      todos={
+        Immutable.List [
+        ]
+      }
+    />
+  </div>
+</div>
+`;

@@ -1,3 +1,13 @@
 export function getTodos(state) {
-    return state.todos.list;
+    switch (state.todos.filter) {
+        case 'COMPLETED':
+            return state.todos.list.filter(todo => todo.completed);
+
+        case 'UNCOMPLETED':
+            return state.todos.list.filter(todo => !todo.completed);
+
+        case 'ALL':
+        default:
+            return state.todos.list;
+    }
 }

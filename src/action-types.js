@@ -1,3 +1,7 @@
 export const CREATE_TODO = 'CREATE_TODO';
 
 export const REMOVE_TODO = 'REMOVE_TODO';
+
+export const CHANGE_TODO_STATE = 'CHANGE_TODO_STATE';
+
+export const CHANGE_FILTER = 'CHANGE_FILTER';

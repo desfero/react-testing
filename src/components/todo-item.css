@@ -1,0 +1,15 @@
+.todo-item {
+    display: flex;
+    align-items: center;
+}
+
+.todo-item__checkbox {
+    --size: 30px;
+    width: var(--size);
+    height: var(--size);
+    margin: 5px;
+}
+
+.todo-item__remove {
+    margin-left: auto;
+}

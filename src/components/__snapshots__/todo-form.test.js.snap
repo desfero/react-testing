@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`todo-form should correctly render component 1`] = `
+Array [
+  <form
+    novalidate=""
+>
+    <input
+        autocomplete="off"
+        autofocus=""
+        class="form-control"
+        maxlength="64"
+        placeholder="What needs to be done?"
+        type="text"
+        value=""
+    >
+        
+    </input>
+</form>,
+  <div
+    class="filter"
+>
+    <span>
+        Filter: 
+    </span>
+    <select
+        class="custom-select"
+    >
+        <option
+            value="ALL"
+        >
+            ALL
+        </option>
+        <option
+            value="COMPLETED"
+        >
+            COMPLETED
+        </option>
+        <option
+            value="UNCOMPLETED"
+        >
+            UNCOMPLETED
+        </option>
+    </select>
+</div>,
+]
+`;

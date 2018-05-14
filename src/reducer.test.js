@@ -1,69 +1,53 @@
-import {List} from 'immutable';
+import { List } from 'immutable';
 import uniqid from 'uniqid';
-import {CREATE_TODO, REMOVE_TODO} from './action-types';
+import { CHANGE_FILTER, CHANGE_TODO_STATE, CREATE_TODO, REMOVE_TODO } from './action-types';
 
 jest.mock('uniqid');
+uniqid.mockReturnValueOnce(1).mockReturnValueOnce(2).mockReturnValueOnce(3);
 
 describe('reducer', () => {
-    it('should return default state', () => {
-        uniqid.mockReturnValueOnce(1);
+    it('should return default state', async () => {
 
-        const {tasksReducer} = require('./reducer');
-
+        const {tasksReducer, TasksState} = await import('./reducer');
 
         const state = tasksReducer(undefined, {});
+        const expectedState = new TasksState();
 
-
-        expect(state.toJS()).toEqual({
-            filter: '',
-            list: [{
-                id: 1,
-                title: 'Complete my homework'
-            }]
-        });
+        expect(state.toJS()).toEqual(expectedState.toJS());
     });
 
-    it('should return correct state for CREATE_TODO', () => {
-        uniqid.mockReturnValueOnce(2);
+    it('should return correct state for CREATE_TODO', async () => {
+        const {tasksReducer, TasksState} = await import('./reducer');
 
-        const {tasksReducer, TasksState} = require('./reducer');
-
-        const todo = {
-            id: 1,
-            title: 'Complete my homework'
-        };
-        const state = new TasksState({
-            list: new List([todo])
-        });
+        const state = new TasksState();
 
         const newState = tasksReducer(state, {
             type: CREATE_TODO,
             payload: 'New todo'
         });
 
-
         expect(newState.get('list').toJS()).toEqual([
             {
+                id: 3,
                 title: 'New todo',
-                id: 2
+                completed: false
             },
-            todo,
-
+            ...state.get('list'),
         ]);
-
-
     });
 
-    it('should return correct state for REMOVE_TODO', () => {
-        const {tasksReducer, TasksState} = require('./reducer');
+    it('should return correct state for REMOVE_TODO', async () => {
+        const {tasksReducer, TasksState} = await import('./reducer');
 
         const todo = {
             id: 1,
-            title: 'Complete my homework'
+            title: 'Complete my homework',
+            completed: false
         };
         const todo2 = {
             id: 2,
-            title: 'Complete something'
+            title: 'Complete something',
+            completed: false
         };
         const state = new TasksState({
             list: new List([todo, todo2])
@@ -74,7 +58,64 @@ describe('reducer', () => {
             payload: 1
         });
 
-
         expect(newState.get('list').toJS()).toEqual([todo2]);
+    });
+
+    it('should return corrent state for CHANGE_TODO_STATE', async () => {
+        const {tasksReducer, TasksState} = await import('./reducer');
+
+        const todos = [
+            {
+                id: 1,
+                title: 'todo 1',
+                completed: true
+            },
+            {
+                id: 2,
+                title: 'todo 2',
+                completed: false
+            },
+            {
+                id: 3,
+                title: 'todo 3',
+                completed: false
+            }
+        ];
+
+        const state = new TasksState({
+              list: new List(todos)
+          });
+
+        let newState = tasksReducer(state, {
+            type: CHANGE_TODO_STATE,
+            payload: 1
+        });
+        expect(newState.get('list').toJS()).toEqual(todos.map(t => t.id === 1 ? {
+            ...t,
+            completed: false
+        } : t));
+
+        newState = tasksReducer(state, {
+            type: CHANGE_TODO_STATE,
+            payload: 2
+        });
+        expect(newState.get('list').toJS()).toEqual(todos.map(t => t.id === 2 ? {
+            ...t,
+            completed: true
+        } : t));
+    });
+
+    it('should return corrent state for CHANGE_FILTER', async () => {
+        const {tasksReducer, TasksState} = await import('./reducer');
+
+        const state = new TasksState();
+        const payload = 'COMPLETED';
+
+        const newState = tasksReducer(state, {
+            type: CHANGE_FILTER,
+            payload
+        });
+
+        expect(newState.get('filter')).toEqual(payload);
     });
 });
